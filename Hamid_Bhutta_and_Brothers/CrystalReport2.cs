@@ -19,6 +19,7 @@ namespace Hamid_Bhutta_and_Brothers {
     public class CrystalReport2 : ReportClass {
         
         public CrystalReport2() {
+
         }
         
         public override string ResourceName {

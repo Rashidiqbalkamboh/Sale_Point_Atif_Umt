@@ -328,6 +328,16 @@ namespace Hamid_Bhutta_and_Brothers
                         }
                         bq = Convert.ToInt32(Convert.ToDouble(ctntxt.Text) * bq);
                         bq = Convert.ToInt32(bq + Convert.ToDouble(bxtxt.Text));
+                        int bspValue;
+                        if (int.TryParse(bsptxt.Text, out bspValue))
+                        {
+                            amttxt.Text = (bq * bspValue).ToString();
+                        }
+                        else
+                        {
+                            // Handle the error, e.g., display a message to the user
+                            MessageBox.Show("Please enter a valid number in the bsptxt field.");
+                        }
                         amttxt.Text = Convert.ToString(bq * Convert.ToInt32(bsptxt.Text));
                         aammtt = Convert.ToDouble(amttxt.Text);
                         bsp = bq * Convert.ToInt32(bsptxt.Text);
@@ -1064,7 +1074,7 @@ private double Converttodouble(ComboBox cnmcombo)
                     ec = (ds.Tables["EmployRec"].Rows[i]["Employ_Cell"]).ToString();
                     txt9 = (TextObject)todaysd.ReportDefinition.ReportObjects["Text21"];
                     txt9.Text = ec;
- 
+                    
                 }
 
 

@@ -393,6 +393,7 @@ namespace Hamid_Bhutta_and_Brothers
             dataGridView1.Height = height;
             
             /*
+             * tari maa ka chola  gati  ka
             //yahan se nechy mera code hy print k lye
             //Open the print dialog
             PrintDialog printDialog = new PrintDialog();
@@ -484,15 +485,15 @@ namespace Hamid_Bhutta_and_Brothers
             
             if (enmcombo.Text != "ALL Employes")
             {
-               /* CrystalReport2 cr = new CrystalReport2();
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["Hamid_Bhutta_and_Brothers.Properties.Setting.DistributionSetup"].ToString();*/
+                CrystalReport2 cr1 = new CrystalReport2();
+                SqlConnection conn1 = new SqlConnection();
+                conn1.ConnectionString = ConfigurationManager.ConnectionStrings["Hamid_Bhutta_and_Brothers.Properties.Setting.DistributionSetup"].ToString();
                 string sql = "SELECT * from Sale_Invoice where E_Name='" + enmcombo.Text + "' and Sale_Date between '" + dateTimePicker1.Value + "' and '" + dateTimePicker2.Value + "'";
                 DataSet ds2 = new DataSet();
-               // SqlDataAdapter da2 = new SqlDataAdapter(sql, conn);
+               SqlDataAdapter da2 = new SqlDataAdapter(sql, conn1);
                 da.Fill(ds2, "Sale_Invoice");
                 DataTable dt = ds2.Tables["Sale_Invoice"];
-               // cr.SetDataSource(ds2.Tables["Sale_Invoice"]);
+                cr1.SetDataSource(ds2.Tables["Sale_Invoice"]);
 
 
                 //Carton aor boxes ka sum leny k lye copy kia hua code paste kr rha hn 

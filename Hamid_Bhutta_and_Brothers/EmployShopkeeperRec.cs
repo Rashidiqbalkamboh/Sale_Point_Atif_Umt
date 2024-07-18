@@ -13,7 +13,7 @@ namespace Hamid_Bhutta_and_Brothers
 {
     public partial class EmployShopkeeperRec : Form
     {
-        SqlConnection cn1 = new SqlConnection("data source=localhost\\sqlexpress;initial catalog=DistributionSetup;integrated security=true");
+        SqlConnection cn1 = new SqlConnection("data source=(localdb)\\MSSqlLocalDb;initial catalog=DistributionSetup;integrated security=true");
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;
         SqlDataAdapter da = new SqlDataAdapter();

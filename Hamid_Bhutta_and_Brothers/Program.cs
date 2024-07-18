@@ -1,6 +1,7 @@
 ﻿                                                                                                                                                                                                             using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Hamid_Bhutta_and_Brothers
@@ -15,7 +16,7 @@ namespace Hamid_Bhutta_and_Brothers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sale_Form());
+            Application.Run(new Log_In());
         }
     }
 }
